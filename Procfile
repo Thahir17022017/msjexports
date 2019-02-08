@@ -1,0 +1,1 @@
+web: java $JAVA_OPTS -jar target/dependency/webapp-runner.jar --port $PORT target/MSJExports3-0.0.1-SNAPSHOT.war
