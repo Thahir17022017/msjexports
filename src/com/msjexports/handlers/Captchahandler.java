@@ -15,10 +15,10 @@ import org.slf4j.LoggerFactory;
 
 
 
-import nl.captcha.Captcha;
-import nl.captcha.backgrounds.GradiatedBackgroundProducer;
-import nl.captcha.servlet.CaptchaServletUtil;
-import nl.captcha.text.renderer.DefaultWordRenderer;
+//import nl.captcha.Captcha;
+//import nl.captcha.backgrounds.GradiatedBackgroundProducer;
+//import nl.captcha.servlet.CaptchaServletUtil;
+//import nl.captcha.text.renderer.DefaultWordRenderer;
 
 public class Captchahandler extends HttpServlet{
 
@@ -42,18 +42,18 @@ public class Captchahandler extends HttpServlet{
 			        fonts.add(new Font("Calibri", Font.ITALIC, 30));
 			        fonts.add(new Font("Palatino Linotype", Font.ITALIC,25));
 			         
-			        Captcha captcha = new Captcha.Builder(120, 50)
-			                .addText(new DefaultWordRenderer(colors, fonts))
-			                .addBackground(new GradiatedBackgroundProducer(Color.white, Color.white))
-			                .gimp()
-			                .addBorder()
-			                .build();
+//			        Captcha captcha = new Captcha.Builder(120, 50)
+//			                .addText(new DefaultWordRenderer(colors, fonts))
+//			                .addBackground(new GradiatedBackgroundProducer(Color.white, Color.white))
+//			                .gimp()
+//			                .addBorder()
+//			                .build();
 			        
-			        logger.info("Generated captcha value :"+captcha.getAnswer());
-			        
-			        request.getSession().setAttribute("captcha",captcha.getAnswer());
-			        // display the image produced
-			        CaptchaServletUtil.writeImage(response, captcha.getImage());
+//			        logger.info("Generated captcha value :"+captcha.getAnswer());
+//			        
+//			        request.getSession().setAttribute("captcha",captcha.getAnswer());
+//			        // display the image produced
+//			        CaptchaServletUtil.writeImage(response, captcha.getImage());
 	 
 	        
 	 		}
